@@ -42,6 +42,7 @@ jobs:
             echo "Server is up!"
             break
           fi
+          cat nohup.out
           echo "Waiting for server to be up..."
           sleep 5
         done
