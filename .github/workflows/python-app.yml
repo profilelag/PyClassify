@@ -43,7 +43,7 @@ jobs:
             break
           fi
           echo "Waiting for server to be up..."
-          sleep 2
+          sleep 5
         done
 
     - name: Send test request
