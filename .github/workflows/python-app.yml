@@ -50,7 +50,7 @@ jobs:
       run: |
         OUT=$(cat example_image.txt | curl -X POST http://localhost:8080/classify -H "Content-Type: application/json" -d @-)
         echo $OUT
-        if $OUT | grep '"success": true'; then
+        if echo $OUT | grep '"success": true'; then
           echo "passed"
         else
           exit 1
