@@ -49,7 +49,8 @@ jobs:
     - name: Send test request
       run: |
         if cat example_image.txt | curl -X POST http://localhost:8080/classify -H "Content-Type: application/json" -d @- | grep '"success": true'; then
-        echo "passed"
-        break
+          echo "passed"
+        else
+          exit 1
         fi
-        exit 1
+        
